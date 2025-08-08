@@ -142,9 +142,15 @@ function Nav() {
           </AnimatePresence>
         </h2>
   <div className="relative hover:scale-105 ease-in-out duration-100 group">
-    <button onClick={()=>setIsOpen(true)} className="bg-purple-600 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-      About Me
-    </button>
+    <button
+  onClick={() => setIsOpen(true)}
+  className="bg-purple-600 hover:bg-purple-700 text-white font-semibold 
+  py-2.5 px-5 rounded-lg shadow-md hover:shadow-lg 
+  transition-all duration-200 ease-in-out"
+>
+  About Me
+</button>
+
         <svg className='w-7 h-7 absolute top-1/2 -translate-y-1/2 translate-x-28 group-hover:translate-x-34  ease-in-out duration-100 ' stroke='currentColor' stroke-width="2" fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 330 330" xml:space="preserve">
 <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001

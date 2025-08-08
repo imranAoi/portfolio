@@ -1,13 +1,28 @@
 import React, { useState, useEffect, useRef } from 'react';
 import icon from '../assets/images/letter-i.png';
 
-
 function Header() {
   const [darkMode, setDarkMode] = useState(false);
-  const [clickStep, setClickStep] = useState(0); // 0 = closed, 1 = hello, 2 = resume
+  const [clickStep, setClickStep] = useState(0);
   const iconRef = useRef(null);
+  const timerRef = useRef(null);
 
-  // Apply dark mode
+  const popupMessages = [
+    "",
+    "Hello",
+    "I am Mohd Imran",
+    "You can contact me",
+    <a
+      href="/MOHD_resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-400 font-semibold"
+    >
+      📄 Here is my resume
+    </a>,
+  ];
+
+  // Dark mode toggle
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
   }, [darkMode]);
@@ -17,44 +32,58 @@ function Header() {
     const handleClickOutside = (event) => {
       if (iconRef.current && !iconRef.current.contains(event.target)) {
         setClickStep(0);
+        clearInterval(timerRef.current);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      clearInterval(timerRef.current);
+    };
   }, []);
 
   const handleIconClick = () => {
-    setClickStep((prev) => (prev + 1) % 3); // cycle 0 → 1 → 2 → 0
+    clearInterval(timerRef.current);
+
+    if (clickStep === 0) {
+      setClickStep(1);
+
+      let step = 1;
+      timerRef.current = setInterval(() => {
+        step++;
+        if (step < popupMessages.length) {
+          setClickStep(step);
+        } else {
+          clearInterval(timerRef.current); // Stop at resume
+        }
+      }, 2000);
+    }
   };
 
-  const popupMessages = ["", "Hello", <a
-    href='/MOHD_resume.pdf'
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-blue-400 font-semibold "
-    
-  >📄 resume</a>];
-
   return (
-    <div className="flex items-center justify-between px-2 bg-white dark:bg-gray-600 opacity-70 rounded relative overflow-hidden">
+    <div className="flex items-center justify-between px-2 
+      bg-white/20 dark:bg-gray-800/20 
+      backdrop-blur-md border border-white/30 
+      rounded-xl shadow-lg relative overflow-hidden">
+
       {/* Logo with Popup */}
       <div ref={iconRef} className="relative flex items-center">
         <img
           onClick={handleIconClick}
-          className={`w-14 lg:w-18  cursor-pointer transform transition-transform duration-500 
+          className={`w-14 lg:w-18 cursor-pointer transform transition-transform duration-500 
             ${clickStep > 0 ? 'rotate-180' : 'rotate-0'}`}
           src={icon}
           alt="icon"
         />
 
-        {/* Animated Popup in Header Row */}
+        {/* Popup */}
         <div
           className={`absolute left-16 top-1/2 -translate-y-1/2 transition-all duration-500 ease-out
             ${clickStep > 0 ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10 pointer-events-none'}
             bg-white dark:bg-gray-700 shadow-lg rounded px-2 py-2 text-sm z-50 
             backdrop-blur-md bg-opacity-80`}
         >
-          <p className="text-gray-800 w-20 dark:text-gray-200">
+          <p className="text-gray-800 w-40 dark:text-gray-200">
             {popupMessages[clickStep]}
           </p>
         </div>
@@ -175,4 +204,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Header
