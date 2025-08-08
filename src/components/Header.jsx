@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import icon from '../assets/images/letter-i.png';
-import resumePDF from '../../public/MOHD_resume.pdf';
+
 
 function Header() {
   const [darkMode, setDarkMode] = useState(false);
@@ -28,7 +28,7 @@ function Header() {
   };
 
   const popupMessages = ["", "Hello", <a
-    href={resumePDF}
+    href='/MOHD_resume.pdf'
     target="_blank"
     rel="noopener noreferrer"
     className="text-blue-400 font-semibold "
