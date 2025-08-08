@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import SkillsSlider from './SkillSlider';
+
 
 function Pop({ onClose }) {
   const popupRef = useRef(null);
@@ -36,18 +38,7 @@ function Pop({ onClose }) {
             <br />
             I have experience working with various technologies and frameworks,
           </p>
-          <div className='flex flex-wrap '>
-          <span className='border border-white text-amber-100 p-2 rounded-full'>#JavaScript</span>
-          <span className='border border-white text-amber-100 p-2 rounded-full'>#React</span>
-          <span className='border border-white text-amber-100 p-2 rounded-full'>#tailwind</span>
-          <span className='border border-white text-amber-100 p-2 rounded-full'>#Mongodb</span>
-          <span className='border border-white text-amber-100 p-2 rounded-full'>#Mongoose</span>
-          <span className='border border-white text-amber-100 p-2 rounded-full'>#redux</span>
-          <span className='border border-white text-amber-100 p-2 rounded-full'>#html</span>
-          <span className='border border-white text-amber-100 p-2 rounded-full '>#css</span>
-          <span className='border border-white text-amber-100 p-2 rounded-full'>#git</span>
-          <span className='border border-white text-amber-100 p-2 rounded-full'>#github</span>
-          </div>
+        <SkillsSlider/>
           </div>
           <div className='space-y-4'>
             <h1 className='text-2xl text-blue-600'>MERN STACK</h1>

@@ -31,11 +31,12 @@ import until3 from '../assets/images/until3.png'
           <h3 className="text-[#459bd5] font-bold text-2xl md:text-4xl">AYATRIO</h3>
           <span className="text-[#459bd5] text-base md:text-lg">(Freelancing projects)</span>
           <p className="text-justify text-sm md:text-base mt-2">
-            Deeply understand advanced concepts, practice with real-world exercises, build expertise with hands-on projects to boost your career.
+            Developed a full-stack web application using the Nextjs, nodejs and reactjs, implementing features such as user authentication, real-time chat, and a responsive UI.
+            payment integration, and better SEO practices followed.
           </p>
 
           <ul className="flex flex-wrap gap-2 mt-2">
-            <li className="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#react.js</li>
+            <li className="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#Next.js</li>
             <li className="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#express.js</li>
             <li className="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#node.js</li>
             <li className="border rounded-[50px] border-[#999] px-[10px] py-[5px] text-sm md:text-base">#swiper.js</li>

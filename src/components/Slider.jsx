@@ -5,6 +5,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import until1 from '../assets/images/until1.png'
+import satwik from '../assets/images/saatvik.webp'
+import kira from '../assets/images/kira.webp'
+
+
 
 function Slider() {
   return (
@@ -33,13 +37,13 @@ function Slider() {
                     />
                     <div className="testimonial-text ml-6 text-left pt-6 md:pt-16 relative">
                       <p className="text-sm md:text-base mb-2">
-                        “I worked with Imran to make my website. I am speechless by
+                        “I worked with Imran to make my website. I am speechless by imran performance.
                       </p>
                       <h2 className="text-right text-[#459bd5] font-bold text-2xl md:text-4xl">
-                        Srihari Kestur
+                        shaheen
                       </h2>
                       <h5 className="text-right text-[#459bd5] text-base md:text-lg">
-                        Founder Harigurus
+                        From OpenStream
                       </h5>
                     </div>
                   </div>
@@ -50,12 +54,12 @@ function Slider() {
                   <div className="flex flex-col md:flex-row max-w-[800px] items-center rounded-lg p-9 shadow-[0_0px_50px_rgba(59,130,246,0.6)] cursor-grab mx-auto my-20">
                     <img
                       className="shrink-0 w-[120px] h-[120px] md:w-[180px] md:h-[180px] drop-shadow-[0_0px_80px_rgba(59,130,246,1)]"
-                      src={until1}
+                      src={kira}
                       alt="testimonial 3"
                     />
                     <div className="testimonial-text ml-6 text-left pt-6 md:pt-16 relative">
                       <p className="text-sm md:text-base mb-2">
-                        “Imran was a wonderful developer to work with! He anticipated
+                        “Imran was a wonderful developer to work with! He anticipated my needs and delivered exceptional results.
                       </p>
                       <h2 className="text-right text-[#459bd5] font-bold text-2xl md:text-4xl">
                         Kira Bragg
@@ -72,18 +76,18 @@ function Slider() {
                   <div className="flex flex-col md:flex-row w-full md:max-w-[800px] items-center rounded-lg p-9 shadow-[0_0px_10px_rgba(59,130,246,0.6)] cursor-grab mx-auto my-20">
                     <img
                       className="shrink-0 w-[120px] h-[120px] md:w-[180px] md:h-[180px]  drop-shadow-[0_0px_80px_rgba(59,130,246,1)]"
-                      src={until1}
+                      src={satwik}
                       alt="testimonial 3"
                     />
                     <div className="testimonial-text ml-6 text-left pt-6 md:pt-16 relative">
                       <p className="text-sm md:text-base mb-2">
-                        “Imran is a talented, committed individual who will l
+                        “Imran is a talented, committed individual who will l go above and beyond to ensure the success of you 
                       </p>
                       <h2 className="text-right text-[#459bd5] font-bold text-2xl md:text-4xl">
                         Saatvik Nagpal
                       </h2>
                       <h5 className="text-right text-[#459bd5] text-base md:text-lg">
-                        Founder, EazyGrad
+                        Founder, bloompointx
                       </h5>
                     </div>
                   </div>
