@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import MatterBackground from './components/MatterBackground';
 import Header from './components/Header';
 import Nav from './components/Nav';
@@ -8,17 +8,28 @@ import Upper from './components/Upper';
 import Slider from './components/Slider';
 
 function App() {
+  const latestRef = useRef(null); // Create a ref
+
+  const scrollToLatest = () => {
+    latestRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <div className="bg-black min-h-screen relative">
         <MatterBackground /> {/* 👈 replaced canvas */}
 
         <div className="relative z-10 p-2 text-white">
-          <div className='flex flex-col justify-between h-screen'>
+          <div className='flex flex-col justify-between min-h-screen'>
             <Header/>
-             <Nav />
+            <Nav />
+
+            {/* Button to scroll */}
             <div className="relative hover:scale-105 ease-in-out duration-100 group w-34 mx-auto">
-              <button className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <button
+                onClick={scrollToLatest} // 👈 trigger scroll
+                className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded "
+              >
                 Latest Works
               </button>
               <svg
@@ -40,7 +51,11 @@ function App() {
             </div>
           </div>
 
-          <Latest />
+          {/* Target section */}
+          <div ref={latestRef}>
+            <Latest />
+          </div>
+
           <Slider />
           <Upper className="mt-10" />
           <Footer />

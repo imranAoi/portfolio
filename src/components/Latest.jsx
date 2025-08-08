@@ -1,5 +1,5 @@
 import React from 'react'
-import proCoder from '../assets/images/ProCodrr.webp'
+
 import until1 from '../assets/images/until1.png'
 import until2 from '../assets/images/until2.png'
 import until3 from '../assets/images/until3.png'

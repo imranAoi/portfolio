@@ -1,16 +1,24 @@
 import React from 'react'
 import icon from '../assets/images/letter-i.png';
  function Footer() {
+  const scrolltoHome = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
   return (
     <div>
         <footer class="flex flex-col items-center pb-10">
       <p class="text-xs text-gray-300">MOHD IMRAN © 2024</p>
       <div class="black-logo my-4">
-        <img className='w-18' src={icon}/>
+       
+          <img onClick={scrolltoHome} className='w-18' src={icon}/>
+        
       </div>
       <ul class="mx-auto flex items-center justify-center gap-6 text-[#b0b2c3]">
         <li>
-          <a href="https://www.linkedin.com/in/anuragsinghbam/" target="_blank">
+          <a href="https://www.linkedin.com/in/mohd-imran-08808b2b1/" target="_blank">
             <svg
               class="w-5 hover:text-white"
               xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +32,7 @@ import icon from '../assets/images/letter-i.png';
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/anuragsinghbam" target="_blank">
+          <a href="https://x.com/ImranAnsar38040" target="_blank">
             <svg
               class="w-5 hover:text-white"
               xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +46,7 @@ import icon from '../assets/images/letter-i.png';
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/procodrr/">
+          <a href="https://www.instagram.com/_.imran._.ansari._?igsh=YzljYTk1ODg3Zg%3D%3D">
             <svg
               class="w-5 hover:text-white"
               xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +60,7 @@ import icon from '../assets/images/letter-i.png';
           </a>
         </li>
         <li>
-          <a href="mailto:anuragsinghbam@gmail.com" target="_blank">
+          <a href="mailto:ansarimran987@gmail.com" target="_blank">
             <svg
               class="w-5 hover:text-white"
               xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +74,7 @@ import icon from '../assets/images/letter-i.png';
           </a>
         </li>
         <li>
-          <a href="https://www.youtube.com/@procodrr">
+          <a href="">
             <svg
               class="w-5 hover:text-white"
               xmlns="http://www.w3.org/2000/svg"
