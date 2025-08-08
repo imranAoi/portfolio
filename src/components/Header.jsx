@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import icon from '../assets/images/letter-i.png';
-import resumePDF from '../assets/MOHD_resume.pdf';
+import resumePDF from '../../public/MOHD_resume.pdf';
 
 function Header() {
   const [darkMode, setDarkMode] = useState(false);
